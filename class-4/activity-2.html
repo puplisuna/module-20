@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the cursed keypad</title>
+    <style>
+        body {
+    
+            font-family: monospace;
+    
+            background: #000;
+    
+            color: #0f0;
+    
+            text-align: center;
+    
+            padding: 50px;
+    
+        }
+    
+        input {
+    
+            font-size: 24px;
+    
+            padding: 5px;
+    
+            margin: 10px;
+    
+            text-align: center;
+    
+        }
+    
+        .keypad button {
+    
+            font-size: 20px;
+    
+            padding: 10px 20px;
+    
+            margin: 5px;
+    
+            background-color: #111;
+    
+            color: #0f0;
+    
+            border: 1px solid #0f0;
+    
+            cursor: pointer;
+    
+        }
+    
+        .keypad button:hover {
+    
+            background-color: #222;
+    
+        }
+    </style>
+</head>
+<body>
+    <h1>the cursed keypad</h1>
+    <p>enter the ancient code.... if you dare</p>
+    <input type="password" id="codeinput" maxlength="4" onfocus="warning()">
+    <div class="keypad">
+        <button onclick="press(1)">1</button>
+        <button onclick="press(2)">2</button>
+        <button onclick="press(3)">3</button>
+        <br>
+        <button onclick="press(4)">4</button>
+        <button onclick="press(5)">5</button>
+        <button onclick="press(6)">6</button>
+        <br>
+        <button onclick="press(7)">7</button>
+        <button onclick="press(8)">8</button>
+        <button onclick="press(9)">9</button>
+        <button onclick="clearinput()">C</button>
+        <button onclick="press(0)">0</button>
+        <button onclick="checkcode()">🔓</button>
+
+    </div>
+
+    <p id="messege"></p>
+    <script>
+        function warning() {
+            alert("this keypad is cursed! enter at your own risk!");
+        }
+
+        function press(num) {
+            const input = document.getElementById("codeinput");
+            if (input.value.length < 4) {
+                input.value += num;
+            } 
+        }
+
+        function clearinput() {
+            document.getElementById("codeinput").value = "";
+            document.getElementById("messege").innerText = "";
+        }
+
+        function checkcode() {
+            const code = document.getElementById("codeinput").value;
+            if (code === "1234") {
+                document.getElementById("messege").innerText = "🔓 access granted!. but the sprits are watching";
+            } else {
+                document.getElementById("messege").innerText = "wrong code!. now they are angry!";
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
