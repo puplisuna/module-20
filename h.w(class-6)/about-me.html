@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ohom Bhattcaharjee</title>
+    <style>
+        /* ===== Eye-catching Gradient Background ===== */
+        body {
+            background: linear-gradient(135deg, #90caf9 0%, #fff 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* ===== Sticky Navigation Bar ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1976d2;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 18px 0 14px 0;
+            transition: color 0.2s;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #bbdefb;
+            text-decoration: underline;
+        }
+
+        /* ===== About Me Section ===== */
+        .about-container {
+            max-width: 900px;
+            margin: 60px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+            padding: 48px 32px 32px 32px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .about-header h1 {
+            color: #1976d2;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .about-header p {
+            color: #1565c0;
+            font-size: 1.2rem;
+        }
+
+        .about-details {
+            margin-bottom: 36px;
+            text-align: center;
+        }
+
+        .about-details h2 {
+            color: #1565c0;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+
+        .about-details p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 18px;
+        }
+
+        /* ===== Skills Cards Section ===== */
+        .skills-section {
+            margin-top: 32px;
+        }
+
+        .skills-title {
+            text-align: center;
+            color: #1976d2;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .skills-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+        }
+
+        .skill-card {
+            background: linear-gradient(120deg, #e3f2fd 60%, #bbdefb 100%);
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+            width: 210px;
+            padding: 28px 18px 20px 18px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 8px 24px rgba(25, 118, 210, 0.18);
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 14px;
+        }
+
+        .skill-card h3 {
+            color: #1976d2;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: #444;
+            font-size: 1rem;
+        }
+
+        /* ===== Footer Styling ===== */
+        footer {
+            background: linear-gradient(to right, #1976d2 60%, #bbdefb 100%);
+            color: #fff;
+            padding: 28px 0 18px 0;
+            text-align: center;
+            border-radius: 0 0 18px 18px;
+            margin-top: 60px;
+            font-size: 1rem;
+            box-shadow: 0 -2px 12px rgba(25, 118, 210, 0.08);
+            position: sticky;
+            bottom: 0;
+            z-index: 99;
+        }
+
+        .footer-nav {
+            margin-bottom: 12px;
+        }
+
+        .footer-nav a {
+            color: #bbdefb;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+            .about-container {
+                padding: 18px 4vw;
+            }
+
+            .skills-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== Navigation Bar ===== -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about-me.html" class="active">About</a></li>
+            <li><a href="home.html#hobby-section">Hobbies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== About Me Section ===== -->
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Me</h1>
+            <p>Hi! I'm Ohom Bhattcaharjee, a passionate coder and creative learner from Sylhet, Bangladesh.</p>
+        </div>
+        <div class="about-details">
+            <h2>What I Do</h2>
+            <p>
+                I love building projects, solving problems, and exploring new technologies. Whether it's web
+                development, visual programming, or creative crafts, I enjoy learning and sharing my knowledge.
+            </p>
+            <h2>My Skills</h2>
+            <p>
+                I have experience with several coding platforms and languages. Here are some of my key skills:
+            </p>
+        </div>
+        <!-- ===== Skills Cards ===== -->
+        <div class="skills-section">
+            <div class="skills-title">Coding Skills</div>
+            <div class="skills-cards">
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <h3>HTML5</h3>
+                    <p>Building the structure of web pages with semantic markup.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    <h3>CSS3</h3>
+                    <p>Styling and designing responsive, modern websites.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity and logic to web applications.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scratch/scratch-original.svg"
+                        alt="Scratch">
+                    <h3>Scratch</h3>
+                    <p>Visual programming for games and animations.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python">
+                    <h3>Python</h3>
+                    <p>Simple scripts and problem solving with Python basics.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt="GitHub">
+                    <h3>GitHub</h3>
+                    <p>Sharing and collaborating on code projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Footer Section ===== -->
+    <footer>
+        <div class="footer-nav">
+            <a href="home.html">Home</a>
+            <a href="about-me.html" class="active">About</a>
+            <a href="home.html#hobby-section">Hobbies</a>
+            
+        </div>
+        &copy; 2025 Ohom Bhattcaharjee. All rights reserved.
+    </footer>
+</body>
+
+</html>

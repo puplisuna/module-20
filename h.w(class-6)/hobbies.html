@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies - Ohom Bhattcaharjee</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #b3c6f7 0%, #e3f2fd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1976d2;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 18px 0 14px 0;
+            transition: color 0.2s;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #bbdefb;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+            padding: 44px 32px 32px 32px;
+        }
+
+        h1 {
+            color: #1976d2;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.3rem;
+            letter-spacing: 1px;
+        }
+
+        .intro {
+            color: #1565c0;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        section {
+            margin-bottom: 36px;
+        }
+
+        section h2 {
+            color: #1565c0;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        .needs-list,
+        .buy-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .needs-list li,
+        .buy-list li {
+            background: #e3f2fd;
+            border-radius: 8px;
+            padding: 10px 18px;
+            color: #1976d2;
+            font-weight: 500;
+            font-size: 1rem;
+            box-shadow: 0 1px 4px rgba(25, 118, 210, 0.04);
+        }
+
+        .qa-section {
+            margin-top: 24px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #1976d2;
+            cursor: pointer;
+            margin-bottom: 6px;
+            transition: color 0.2s;
+        }
+
+        .question:hover {
+            color: #1565c0;
+        }
+
+        .answer {
+            display: none;
+            margin-bottom: 16px;
+            color: #444;
+            background: #f5fafd;
+            border-radius: 6px;
+            padding: 10px 16px;
+            box-shadow: 0 1px 4px rgba(25, 118, 210, 0.03);
+        }
+
+        .answer.active {
+            display: block;
+            animation: fadeIn 0.4s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background: linear-gradient(to right, #1976d2 60%, #bbdefb 100%);
+            color: #fff;
+            padding: 28px 0 18px 0;
+            text-align: center;
+            border-radius: 0 0 18px 18px;
+            margin-top: 60px;
+            font-size: 1rem;
+            box-shadow: 0 -2px 12px rgba(25, 118, 210, 0.08);
+            position: sticky;
+            bottom: 0;
+            z-index: 99;
+        }
+
+        .footer-nav {
+            margin-bottom: 12px;
+        }
+
+        .footer-nav a {
+            color: #bbdefb;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 4vw;
+            }
+
+            .needs-list,
+            .buy-list {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== Navigation Bar ===== -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+            <li><a href="hobbies.html" class="active">Hobbies</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>My Hobbies</h1>
+        <div class="intro">
+            Welcome! Here you'll discover my favorite hobbies, why I love them, and how you can start too.
+        </div>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                My hobbies are <strong>Resin Art</strong>, <strong>Journaling</strong>, and <strong>Crafts</strong>.
+                These activities let me express my creativity, relax after a busy day, and make beautiful things for
+                myself and others.
+            </p>
+        </section>
+
+        <!-- Why I Do This Section -->
+        <section>
+            <h2>Why These Are My Hobbies?</h2>
+            <p>
+                I enjoy these hobbies because they help me unwind, boost my creativity, and give me a sense of
+                accomplishment. Each finished project is unique and personal, and I love learning new techniques and
+                sharing my creations.
+            </p>
+        </section>
+
+                <!-- What I Need Section (for Each Hobby) -->
+                <section>
+                    <h2>What Do I Need?</h2>
+                    <h3 style="color:#1976d2; margin-top:18px;">Resin Art</h3>
+                    <ul class="needs-list">
+                        <li>Epoxy Resin & Hardener</li>
+                        <li>Color Pigments</li>
+                        <li>Mixing Cups & Sticks</li>
+                        <li>Molds</li>
+                        <li>Gloves & Mask</li>
+                        <li>Protective Sheet</li>
+                    </ul>
+                    <h3 style="color:#1976d2; margin-top:24px;">Journaling</h3>
+                    <ul class="needs-list">
+                        <li>Notebook or Journal</li>
+                        <li>Pens & Markers</li>
+                        <li>Stickers & Washi Tape</li>
+                        <li>Stamps</li>
+                        <li>Inspiration</li>
+                    </ul>
+                    <h3 style="color:#1976d2; margin-top:24px;">Crafts</h3>
+                    <ul class="needs-list">
+                        <li>Paper & Cardboard</li>
+                        <li>Glue & Tape</li>
+                        <li>Scissors</li>
+                        <li>Paints & Brushes</li>
+                        <li>Beads & Threads</li>
+                        <li>Imagination</li>
+                    </ul>
+                    </section>
+
+        <!-- Where to Buy Section (for Each Hobby) -->
+        <section>
+            <h2>Where to Find Products & Raw Materials?</h2>
+            <h3 style="color:#1976d2; margin-top:18px;">Resin Art</h3>
+            <ul class="buy-list">
+                <li>Online shops (Daraz, Amazon, etc.) for resin kits, pigments, and molds</li>
+                <li>Specialty resin/craft suppliers for professional-grade resin and tools</li>
+                <li>Local art supply stores for basic materials</li>
+            </ul>
+            <h3 style="color:#1976d2; margin-top:24px;">Journaling</h3>
+            <ul class="buy-list">
+                <li>Stationery shops for journals, pens, and markers</li>
+                <li>Online stores for stickers, washi tape, and stamps</li>
+                <li>Bookstores for unique notebooks and inspiration</li>
+            </ul>
+            <h3 style="color:#1976d2; margin-top:24px;">Crafts</h3>
+            <ul class="buy-list">
+                <li>Local craft markets for unique and handmade materials</li>
+                <li>Art supply stores for paper, paints, and brushes</li>
+                <li>Online shops for beads, threads, and specialty items</li>
+                <li>Stationery stores for glue, tape, and scissors</li>
+            </ul>
+        </section>
+
+        <!-- How To Do Section -->
+        <section>
+            <h2>How To Do My Hobbies?</h2>
+            <ol>
+                <li><strong>Resin Art:</strong> Mix resin and hardener, add pigments, pour into molds, let it cure, and
+                    demold your creation.</li>
+                <li><strong>Journaling:</strong> Write your thoughts, decorate with stickers and washi tape, and make it
+                    your own.</li>
+                <li><strong>Crafts:</strong> Gather materials, plan your project, cut and assemble, then decorate as you
+                    like!</li>
+            </ol>
+        </section>
+
+        <!-- Question & Answer Section -->
+        <section class="qa-section">
+            <h2>Questions & Answers</h2>
+            <div>
+                <div class="question" onclick="toggleAnswer(0)">How long does resin art take to cure?</div>
+                <div class="answer">Usually 24-48 hours, depending on the resin brand and room temperature.</div>
+            </div>
+            <div>
+                <div class="question" onclick="toggleAnswer(1)">Is journaling only for writers?</div>
+                <div class="answer">No! Anyone can journal. You can draw, doodle, paste photos, or just jot down
+                    thoughts.</div>
+            </div>
+            <div>
+                <div class="question" onclick="toggleAnswer(2)">Where can I get inspiration for crafts?</div>
+                <div class="answer">Pinterest, YouTube, and craft blogs are great sources for new ideas and tutorials.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="ending-letter" style="margin-top:40px;">
+        <h2 style="color:#1976d2; text-align:center;">A Few Words Before You Go</h2>
+        <p style="font-size:1.1rem; color:#444; max-width:700px; margin:18px auto 0 auto; text-align:center;">
+            Thank you for exploring my hobbies! I hope you found inspiration and ideas to start your own creative journey.
+            Remember, hobbies are not just about making things—they’re about expressing yourself, relaxing, and having fun.
+            If you ever want to share your creations or ask questions, feel free to reach out. Happy crafting!
+        </p>
+        <p style="text-align:center; color:#1565c0; margin-top:18px;">
+            — Ohom Bhattcaharjee
+        </p>
+        </section
+
+    <!-- ===== Footer Section ===== -->
+    <footer>
+        <div class="footer-nav">
+            <a href="home.html">Home</a>
+            <a href="about-me.html">About Me</a>
+            <a href="hobbies.html" class="active">Hobbies</a>
+        </div>
+        &copy; 2025 Ohom Bhattcaharjee. All rights reserved.
+    </footer>
+    <script>
+        // Toggle Q&A answers
+        function toggleAnswer(idx) {
+            const answers = document.querySelectorAll('.answer');
+            answers.forEach((ans, i) => {
+                if (i === idx) {
+                    ans.classList.toggle('active');
+                } else {
+                    ans.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

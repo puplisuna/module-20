@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #b3c6f7 0%, #e3f2fd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .signup-container {
+            max-width: 370px;
+            margin: 70px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+            padding: 38px 28px 28px 28px;
+            text-align: center;
+        }
+
+        .user-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+            background: #e3f2fd;
+        }
+
+        h2 {
+            color: #1976d2;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .signup-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #b3c6f7;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f5fafd;
+            transition: border 0.2s;
+        }
+
+        .signup-input:focus {
+            border: 1.5px solid #1976d2;
+            outline: none;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 12px;
+            background: #1976d2;
+            color: #fff;
+            transition: background 0.2s;
+        }
+
+        .signup-btn:hover {
+            background: #1565c0;
+        }
+
+        .login-link {
+            margin-top: 10px;
+            font-size: 0.98rem;
+            color: #555;
+        }
+
+        .login-link a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            color: #388e3c;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .error-message {
+            color: #d32f2f;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg"
+            alt="User Photo" class="user-photo">
+        <h2>Create Your Account</h2>
+        <form id="signupForm">
+            <input type="text" class="signup-input" id="signup-username" placeholder="Username" required>
+            <input type="password" class="signup-input" id="signup-password" placeholder="Password" required>
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <div class="success-message" id="successMsg" style="display:none;"></div>
+        <div class="error-message" id="errorMsg" style="display:none;"></div>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Login here</a>
+        </div>
+    </div>
+    <script>
+        // Store user info in localStorage on sign up
+        document.getElementById('signupForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('signup-username').value.trim();
+            const password = document.getElementById('signup-password').value;
+            const successMsg = document.getElementById('successMsg');
+            const errorMsg = document.getElementById('errorMsg');
+
+            // Simple validation
+            if (username.length < 3 || password.length < 3) {
+                errorMsg.textContent = "Username and password must be at least 3 characters.";
+                errorMsg.style.display = "block";
+                successMsg.style.display = "none";
+                return;
+            }
+
+            // Save to localStorage
+            localStorage.setItem('myapp_username', username);
+            localStorage.setItem('myapp_password', password);
+
+            successMsg.textContent = "Sign up successful! Redirecting to login...";
+            successMsg.style.display = "block";
+            errorMsg.style.display = "none";
+
+            setTimeout(function () {
+                window.location.href = "login.html";
+            }, 1500);
+        });
+    </script>
+    <footer style="
+        background: linear-gradient(to right, #1976d2 60%, #bbdefb 100%);
+        color: #fff;
+        padding: 22px 0 16px 0;
+        text-align: center;
+        border-radius: 0 0 18px 18px;
+        margin-top: 40px;
+        font-size: 1rem;
+        box-shadow: 0 -2px 12px rgba(25, 118, 210, 0.08);
+    ">
+        &copy; 2025 Ohom Bhattcaharjee. All rights reserved.
+    </footer>
+</body>
+
+</html>

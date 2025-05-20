@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* ===== Soothing Color Palette (Google Material) ===== */
+        body {
+            background: linear-gradient(to bottom, #b3c6f7 0%, #e3f2fd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .login-container {
+            max-width: 370px;
+            margin: 70px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+            padding: 38px 28px 28px 28px;
+            text-align: center;
+        }
+
+        .user-photo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+            background: #e3f2fd;
+        }
+
+        h2 {
+            color: #1976d2;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #b3c6f7;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f5fafd;
+            transition: border 0.2s;
+        }
+
+        .login-input:focus {
+            border: 1.5px solid #1976d2;
+            outline: none;
+        }
+
+        .login-btn,
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 12px;
+            transition: background 0.2s;
+        }
+
+        .login-btn {
+            background: #1976d2;
+            color: #fff;
+        }
+
+        .login-btn:hover {
+            background: #1565c0;
+        }
+
+        .signup-btn {
+            background: #e3f2fd;
+            color: #1976d2;
+            border: 1px solid #b3c6f7;
+        }
+
+        .signup-btn:hover {
+            background: #bbdefb;
+        }
+
+        .signup-link {
+            margin-top: 10px;
+            font-size: 0.98rem;
+            color: #555;
+        }
+
+        .signup-link a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg" alt="User Photo" class="user-photo">
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+            <input type="text" class="login-input" id="username" placeholder="Username" required>
+            <input type="password" class="login-input" id="password" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <button class="signup-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+        <div class="signup-link">
+            Don't have an account? <a href="signup.html">Sign up here</a>
+        </div>
+    </div>
+    <script>
+        // Simple redirect to homepage on login (replace 'home.html' with your homepage)
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            window.location.href = 'home.html';
+        });
+    </script>
+
+    
+    <footer style="
+    background: linear-gradient(to right, #1976d2 60%, #bbdefb 100%);
+    color: #fff;
+    padding: 22px 0 16px 0;
+    text-align: center;
+    border-radius: 0 0 18px 18px;
+    margin-top: 40px;
+    font-size: 1rem;
+    box-shadow: 0 -2px 12px rgba(25, 118, 210, 0.08);
+    ">
+        &copy; 2025 Ohom Bhattcaharjee. All rights reserved.
+    </footer>
+</body>
+
+</html>

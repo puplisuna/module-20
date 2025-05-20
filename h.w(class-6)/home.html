@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohom Bhattcaharjee - Home</title>
+    <style>
+        /* ===== Soothing Gradient Background ===== */
+        body {
+            background: linear-gradient(to bottom, #b3c6f7 0%, #e3f2fd 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* ===== Sticky Navigation Bar ===== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #1976d2;
+            box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+            padding: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 18px 0 14px 0;
+            transition: color 0.2s;
+            letter-spacing: 1px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #bbdefb;
+            text-decoration: underline;
+        }
+
+        /* ===== Main Content Styling ===== */
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+            padding: 48px 32px 32px 32px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #1565c0;
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+        }
+
+        .info-section {
+            margin: 36px 0;
+            text-align: left;
+        }
+
+        .info-section h2 {
+            color: #1565c0;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+        }
+
+        .info-section p,
+        .info-section ul {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 18px;
+        }
+
+        .info-section ul {
+            padding-left: 20px;
+        }
+
+        /* ===== Footer Styling ===== */
+        footer {
+            background: linear-gradient(to right, #1976d2 60%, #bbdefb 100%);
+            color: #fff;
+            padding: 28px 0 18px 0;
+            text-align: center;
+            border-radius: 0 0 18px 18px;
+            margin-top: 60px;
+            font-size: 1rem;
+            box-shadow: 0 -2px 12px rgba(25, 118, 210, 0.08);
+            position: sticky;
+            bottom: 0;
+            z-index: 99;
+        }
+
+        .footer-nav {
+            margin-bottom: 12px;
+        }
+
+        .footer-nav a {
+            color: #bbdefb;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        .footer-nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 4vw;
+            }
+
+            nav ul {
+                gap: 16px;
+            }
+
+            .footer-nav a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== Navigation Bar ===== -->
+    <nav>
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about-me.html">About</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <div class="container">
+        <h1>Ohom Bhattcaharjee</h1>
+        <div class="subtitle">Welcome to my personal website! Here you can learn more about me, my journey, and my
+            passions.</div>
+
+        <div class="info-section" id="about-section">
+            <h2>About Me</h2>
+            <p>
+                I am Ohom Bhattcaharjee, a passionate and self-motivated programmer from Sylhet, Bangladesh. I love
+                learning new technologies, building creative projects, and sharing my knowledge with others.
+            </p>
+            <ul>
+                <li>🌍 Location: Sylhet, Bangladesh</li>
+                <li>📧 Email: <a href="mailto:ohombhattacharjee299@gmail.com">ohombhattacharjee299@gmail.com</a></li>
+                <li>💻 Skills: HTML, CSS, JavaScript, Scratch, Code.org, and more</li>
+            </ul>
+        </div>
+
+        <div class="info-section" id="hobby-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>🎨 Resin Art</li>
+                <li>📓 Journaling</li>
+                <li>✂️ Crafts</li>
+            </ul>
+            <p>
+                My hobbies help me relax, express my creativity, and learn new things every day!
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== Footer Section ===== -->
+    <footer>
+        <div class="footer-nav">
+            <a href="home.html">Home</a>
+            <a href="about-me.html" onclick="scrollToSection('about-section')">About</a>
+            <a href="hobbies.html" onclick="scrollToSection('hobby-section')">Hobbies</a>
+            
+        </div>
+        &copy; 2025 Ohom Bhattcaharjee. All rights reserved.
+    </footer>
+    <script>
+        // Smooth scroll for footer navigation
+        function scrollToSection(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        // Highlight nav links on scroll
+        window.addEventListener('scroll', function () {
+            const about = document.getElementById('about-section');
+            const hobby = document.getElementById('hobby-section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            if (window.scrollY + 100 >= hobby.offsetTop) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === '#hobby-section') link.classList.add('active');
+                });
+            } else if (window.scrollY + 100 >= about.offsetTop) {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === '#about-section') link.classList.add('active');
+                });
+            } else {
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === 'home.html') link.classList.add('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
